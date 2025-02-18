@@ -269,7 +269,7 @@ function gerarCronograma(vestibular) {
 }
 
 function abrirMateria(materia) {
-  fetch(`materials/html/${materia}.html`)
+  fetch(`materias/html/${materia}.html`)
       .then(response => {
           if (!response.ok) throw new Error('Matéria não encontrada');
           return response.text();
@@ -281,12 +281,12 @@ function abrirMateria(materia) {
           // Carrega o CSS específico da matéria
           const link = document.createElement('link');
           link.rel = 'stylesheet';
-          link.href = `materials/css/materials.css`;
+          link.href = `materias/css/materias.css`;
           document.head.appendChild(link);
           
           // Carrega o JS específico da matéria
           const script = document.createElement('script');
-          script.src = `materials/js/matemas.js`;
+          script.src = `materias/js/matemas.js`;
           document.body.appendChild(script);
       })
       .catch(error => {
@@ -305,7 +305,7 @@ function voltarParaMaterias() {
   document.getElementById('materias').style.display = 'block';
   
   // Remove CSS e JS específicos
-  document.querySelector('link[href*="materials.css"]')?.remove();
+  document.querySelector('link[href*="materias.css"]')?.remove();
   document.querySelector('script[src*="matemas.js"]')?.remove();
 }
 
