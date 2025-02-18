@@ -268,8 +268,16 @@ function gerarCronograma(vestibular) {
   }
 }
 
-function abrirMateria(nome) {
-  window.location.href = "../materias/html/" + nome + ".html";
+function abrirMateria(materia) {
+  fetch(`materials/${materia}.html`)
+    .then(response => response.text())
+    .then(html => {
+      document.getElementById('conteudo-materia').innerHTML = html;
+      document.getElementById('pagina-materia').style.display = 'block';
+    })
+    .catch(() => {
+      document.getElementById('conteudo-materia').innerHTML = '<p>Conteúdo não encontrado</p>';
+    });
 }
 
 
