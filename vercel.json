@@ -1,6 +1,6 @@
 {
     "rewrites": [
-      { "source": "/materials/(.*)", "destination": "/materials/html/$1" },
+      { "source": "/materias/(.*)", "destination": "/materias/html/$1" },
       { "source": "/(.*)", "destination": "/index.html" }
     ]
   }
