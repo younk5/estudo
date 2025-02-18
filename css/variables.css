@@ -1,0 +1,28 @@
+:root {
+    --primary-color: #ffa6d4;
+    --secondary-color: #ffcae6;
+    --accent-color: #ffe1f0;
+    --text-color: #804d6d;
+    --background-color: #fff8fb;
+    --card-color: #ffffff;
+    --shadow-color: rgba(255, 166, 212, 0.25);
+    --border-radius: 20px;
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    
+    /* Font sizes */
+    --font-xs: 0.75rem;
+    --font-sm: 0.875rem;
+    --font-base: 1rem;
+    --font-lg: 1.125rem;
+    --font-xl: 1.25rem;
+    --font-2xl: 1.5rem;
+    --font-3xl: 2rem;
+    
+    /* Spacing */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 1.5rem;
+    --spacing-lg: 2rem;
+    --spacing-xl: 2.5rem;
+    --spacing-2xl: 3rem;
+  }

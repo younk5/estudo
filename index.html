@@ -1,0 +1,458 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Direito <3</title>
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header>
+    <div class="ribbon ribbon-left"></div>
+    <div class="ribbon ribbon-right"></div>
+    <h1>Direito <3</h1>
+    <p>Sua plataforma de estudos jurídicos! 🎀</p>
+  </header>
+
+  <nav>
+    <button class="nav-button active" onclick="showSection('universidades')">Universidades 🎓</button>
+    <button class="nav-button" onclick="showSection('materias')">Matérias 📚</button>
+    <button class="nav-button" onclick="showSection('Simulados')">Simulados ✍🏻</button>
+    <button class="nav-button" onclick="showSection('calendario')">Calendário 📅</button>
+    <button class="nav-button" onclick="window.open('https://youtu.be/hCzHFQtevF0?list=PL8vXuI6zmpdhWCEOQKTf8tEM568D_-PHt', '_blank')">Playlist ▶️</button>
+  </nav>
+
+  <div class="container">
+    <div id="universidades" class="content-section">
+      <h2>Direito Principais Vestibulares </h2>
+      
+      <div class="highlight-box">
+        <h3>🎀 FUVEST - USP</h3>
+        <p>Próxima prova: Dezembro 2025</p>
+        <p>90 questões + Redação</p>
+      </div>
+
+      <div class="highlight-box">
+        <h3>🎀 UnB</h3>
+        <p>PAS e ENEM</p>
+        <p>Sistema interdisciplinar</p>
+      </div>
+    </div>
+
+
+<!-- Seção de Matérias -->
+<div id="materias" class="content-section" style="display: none">
+  <h2>Matérias para Vestibular</h2>
+
+  <!-- Categoria: Linguagens -->
+  <div class="categoria">
+      <h3 class="categoria-titulo">Linguagens</h3>
+      <div class="materias-grid">
+          <!-- Português -->
+          <div class="materia-card" onclick="abrirMateria('portugues')">
+              <h3>📚 Portugues</h3>
+              <p>Gramática, Literatura e Redação</p>
+          </div>
+      </div>
+  </div>
+
+  <!-- Categoria: Matemática -->
+  <div class="categoria">
+      <h3 class="categoria-titulo">Matemática</h3>
+      <div class="materias-grid">
+          <!-- Matemática -->
+          <div class="materia-card" onclick="abrirMateria('matematica')">
+              <h3>🔢 Matematica</h3>
+              <p>Álgebra, Geometria e Trigonometria</p>
+          </div>
+      </div>
+  </div>
+
+  <!-- Categoria: Ciências da Natureza -->
+  <div class="categoria">
+      <h3 class="categoria-titulo">Ciências da Natureza</h3>
+      <div class="materias-grid">
+          <!-- Biologia -->
+          <div class="materia-card" onclick="abrirMateria('biologia')">
+              <h3>🧬 Biologia</h3>
+              <p>Biologia Celular, Genética e Ecologia</p>
+          </div>
+          <!-- Química -->
+          <div class="materia-card" onclick="abrirMateria('quimica')">
+              <h3>🧪 Quimica</h3>
+              <p>Química Geral, Orgânica e Inorgânica</p>
+          </div>
+          <!-- Física -->
+          <div class="materia-card" onclick="abrirMateria('fisica')">
+              <h3>⚛️ Fisica</h3>
+              <p>Mecânica, Termodinâmica e Eletricidade</p>
+          </div>
+      </div>
+  </div>
+
+  <!-- Categoria: Ciências Humanas -->
+  <div class="categoria">
+      <h3 class="categoria-titulo">Ciências Humanas</h3>
+      <div class="materias-grid">
+          <!-- História -->
+          <div class="materia-card" onclick="abrirMateria('historia')">
+              <h3>📜 Historia</h3>
+              <p>História Geral e do Brasil</p>
+          </div>
+          <!-- Geografia -->
+          <div class="materia-card" onclick="abrirMateria('geografia')">
+              <h3>🌎 Geografia</h3>
+              <p>Geografia Geral e do Brasil</p>
+          </div>
+          <!-- Filosofia -->
+          <div class="materia-card" onclick="abrirMateria('filosofia')">
+              <h3>🤔 Filosofia</h3>
+              <p>Filosofia Geral e Jurídica</p>
+          </div>
+          <!-- Sociologia -->
+          <div class="materia-card" onclick="abrirMateria('sociologia')">
+              <h3>👥 Sociologia</h3>
+              <p>Sociologia Geral e Jurídica</p>
+          </div>
+          <!-- Atualidades -->
+          <div class="materia-card" onclick="abrirMateria('atualidades')">
+              <h3>📰 Atualidades</h3>
+              <p>Temas Contemporâneos</p>
+          </div>
+      </div>
+  </div>
+</div>
+    
+    <!-- Template para página de cada matéria -->
+    <div id="pagina-materia" class="content-section" style="display: none">
+        <button onclick="voltarParaMaterias()" class="voltar-btn">← Voltar para Matérias</button>
+        
+        <div id="conteudo-materia">
+            <!-- Conteúdo será preenchido dinamicamente -->
+        </div>
+    </div>
+
+<!-- Seção de Simulados -->
+  <div id="Simulados" class="content-section" style="display: none">
+    <div class="simulado-section">
+      <div class="simulado-header">
+        <h2>Simulados Oficiais 📝</h2>
+        <p>Prepare-se com provas reais de diversos anos</p>
+      </div>
+
+      <!-- FUVEST 2024 -->
+      <div class="year-group">
+        <h3 class="year-title">FUVEST 2024</h3>
+        <div class="exams-grid">
+          <!-- Primeira Fase -->
+          <div class="exam-card">
+            <div class="exam-header">
+              <span class="exam-year">2024</span>
+              <span class="exam-type">1ª Fase</span>
+            </div>
+            <div class="exam-buttons">
+              <a href="https://acervo.fuvest.br/fuvest/2024/fuvest2024_primeira_fase_prova_V.pdf" class="btn-simulado btn-prova" target="_blank">
+                <i class="fas fa-scroll"></i> Prova V
+              </a>
+              <a href="https://acervo.fuvest.br/fuvest/2024/fuvest2024_primeira_fase_prova_K.pdf" class="btn-simulado btn-prova" target="_blank">
+                <i class="fas fa-scroll"></i> Prova K
+              </a>
+              <a href="https://acervo.fuvest.br/fuvest/2024/fuvest2024_primeira_fase_prova_Q.pdf" class="btn-simulado btn-prova" target="_blank">
+                <i class="fas fa-scroll"></i> Prova Q
+              </a>
+              <a href="https://acervo.fuvest.br/fuvest/2024/fuvest2024_primeira_fase_prova_X.pdf" class="btn-simulado btn-prova" target="_blank">
+                <i class="fas fa-scroll"></i> Prova X
+              </a>
+              <a href="https://acervo.fuvest.br/fuvest/2024/fuvest2024_primeira_fase_prova_Z.pdf" class="btn-simulado btn-prova" target="_blank">
+                <i class="fas fa-scroll"></i> Prova Z
+              </a>
+              <a href="https://www.fuvest.br/wp-content/uploads/fuvest2025_gabarito_primeira_fase.pdf" class="btn-simulado btn-gabarito" target="_blank">
+                <i class="fas fa-check-double"></i> Gabarito
+              </a>
+            </div>
+            <div class="exam-stats">
+              <div class="stat-item">
+                <span>Questões:</span>
+                <span>90</span>
+              </div>
+              <div class="stat-item">
+                <span>Duração:</span>
+                <span>5h</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Segunda Fase -->
+          <div class="exam-card">
+            <div class="exam-header">
+              <span class="exam-year">2024</span>
+              <span class="exam-type">2ª Fase</span>
+            </div>
+            <div class="exam-buttons">
+              <a href="https://acervo.fuvest.br/fuvest/2024/fuvest2024_segunda_fase_prova_1dia.pdf" class="btn-simulado btn-prova" target="_blank">
+                <i class="fas fa-scroll"></i> Primeiro dia
+              </a>
+              <a href="https://acervo.fuvest.br/fuvest/2024/fuvest2024_segunda_fase_prova_2dia.pdf" class="btn-simulado btn-prova" target="_blank">
+                <i class="fas fa-scroll"></i> Segundo dia
+              </a> 
+              <a href="https://acervo.fuvest.br/fuvest/2024/fuvest_2024_2024.01.22_RESPOSTAS_USP_Guia.pdf" class="btn-simulado btn-gabarito" target="_blank">
+                <i class="fas fa-check-double"></i> Abordagens
+              </a>
+            </div>
+            <div class="exam-stats">
+              <div class="stat-item">
+                <span>Questões:</span>
+                <span>20</span>
+              </div>
+              <div class="stat-item">
+                <span>Duração:</span>
+                <span>4h</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- FUVEST 2023 -->
+      <div class="year-group">
+        <h3 class="year-title">FUVEST 2023</h3>
+        <div class="exams-grid">
+          <!-- Primeira Fase -->
+          <div class="exam-card">
+            <div class="exam-header">
+              <span class="exam-year">2023</span>
+              <span class="exam-type">1ª Fase</span>
+            </div>
+            <div class="exam-buttons">
+              <a href="https://acervo.fuvest.br/fuvest/2023/fuvest2023_primeira_fase_prova_V.pdf" class="btn-simulado btn-prova" target="_blank">
+                <i class="fas fa-scroll"></i> Prova V
+              </a>
+              <a href="https://acervo.fuvest.br/fuvest/2023/fuvest2023_primeira_fase_prova_K.pdf" class="btn-simulado btn-prova" target="_blank">
+                <i class="fas fa-scroll"></i> Prova K
+              </a>
+              <a href="https://acervo.fuvest.br/fuvest/2023/fuvest2023_primeira_fase_prova_Q.pdf" class="btn-simulado btn-prova" target="_blank">
+                <i class="fas fa-scroll"></i> Prova Q
+              </a>
+              <a href="https://acervo.fuvest.br/fuvest/2023/fuvest2023_primeira_fase_prova_X.pdf" class="btn-simulado btn-prova" target="_blank">
+                <i class="fas fa-scroll"></i> Prova X
+              </a>
+              <a href="https://acervo.fuvest.br/fuvest/2023/fuvest2023_primeira_fase_prova_Z.pdf" class="btn-simulado btn-prova" target="_blank">
+                <i class="fas fa-scroll"></i> Prova Z
+              </a>
+              <a href="https://www.fuvest.br/wp-content/uploads/fuvest2024_gabarito_primeira_fase.pdf" class="btn-simulado btn-gabarito" target="_blank">
+                <i class="fas fa-check-double"></i> Gabarito
+              </a>
+            </div>
+            <div class="exam-stats">
+              <div class="stat-item">
+                <span>Questões:</span>
+                <span>90</span>
+              </div>
+              <div class="stat-item">
+                <span>Duração:</span>
+                <span>5h</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Segunda Fase -->
+          <div class="exam-card">
+            <div class="exam-header">
+              <span class="exam-year">2023</span>
+              <span class="exam-type">2ª Fase</span>
+            </div>
+            <div class="exam-buttons">
+              <a href="https://acervo.fuvest.br/fuvest/2023/fuvest_2023_segunda_fase_dia_1.pdf" class="btn-simulado btn-prova" target="_blank">
+                <i class="fas fa-scroll"></i> Primeiro dia
+              </a>
+              <a href="https://acervo.fuvest.br/fuvest/2023/fuvest_2023_segunda_fase_dia_2.pdf" class="btn-simulado btn-prova" target="_blank">
+                <i class="fas fa-scroll"></i> Segundo dia
+              </a> 
+              <a href="https://acervo.fuvest.br/fuvest/2023/fuvest2023_abordagens_esperadas_2fase.pdf" class="btn-simulado btn-gabarito" target="_blank">
+                <i class="fas fa-check-double"></i> Abordagens
+              </a>
+            </div>
+            <div class="exam-stats">
+              <div class="stat-item">
+                <span>Questões:</span>
+                <span>20</span>
+              </div>
+              <div class="stat-item">
+                <span>Duração:</span>
+                <span>4h</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      
+      <!-- ENEM 2024 dia 1-->
+      <div class="year-group">
+        <h3 class="year-title">ENEM 2024 </h3>
+        <div class="exams-grid">
+          <!-- Primeira Fase -->
+          <div class="exam-card">
+            <div class="exam-header">
+              <span class="exam-year">2024</span>
+              <span class="exam-type">1ª Fase</span>
+            </div>
+            <div class="exam-buttons">
+              <a href="https://download.inep.gov.br/enem/provas_e_gabaritos/2024_PV_impresso_D1_CD1.pdf" class="btn-simulado btn-prova" target="_blank">
+                <i class="fas fa-scroll"></i> Prova
+              </a>
+              <a href="https://download.inep.gov.br/enem/provas_e_gabaritos/2024_GB_impresso_D1_CD1.pdf" class="btn-simulado btn-gabarito" target="_blank">
+                <i class="fas fa-check-double"></i> Gabarito
+              </a>
+            </div>
+            <div class="exam-stats">
+              <div class="stat-item">
+                <span>Questões:</span>
+                <span>90</span>
+              </div>
+              <div class="stat-item">
+                <span>Duração:</span>
+                <span>5 horas e 30 minutos</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Segunda Fase -->
+          <div class="exam-card">
+            <div class="exam-header">
+              <span class="exam-year">2024</span>
+              <span class="exam-type">2ª Fase</span>
+            </div>
+            <div class="exam-buttons">
+              <a href="https://download.inep.gov.br/enem/provas_e_gabaritos/2024_PV_impresso_D2_CD5.pdf" class="btn-simulado btn-prova" target="_blank">
+                <i class="fas fa-scroll"></i> Prova
+              </a>
+              <a href="https://download.inep.gov.br/enem/provas_e_gabaritos/2024_GB_impresso_D2_CD5.pdf" class="btn-simulado btn-gabarito" target="_blank">
+                <i class="fas fa-check-double"></i> Gabarito
+              </a>
+            </div>
+            <div class="exam-stats">
+              <div class="stat-item">
+                <span>Questões:</span>
+                <span>90</span>
+              </div>
+              <div class="stat-item">
+                <span>Duração:</span>
+                <span>5 horas e 30 minutos</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+            <!-- ENEM 2024 dia 1-->
+            <div class="year-group">
+              <h3 class="year-title">ENEM 2023 </h3>
+              <div class="exams-grid">
+                <!-- Primeira Fase -->
+                <div class="exam-card">
+                  <div class="exam-header">
+                    <span class="exam-year">2024</span>
+                    <span class="exam-type">1ª Fase</span>
+                  </div>
+                  <div class="exam-buttons">
+                    <a href="https://download.inep.gov.br/enem/provas_e_gabaritos/2023_PV_impresso_D1_CD1.pdf" class="btn-simulado btn-prova" target="_blank">
+                      <i class="fas fa-scroll"></i> Prova
+                    </a>
+                    <a href="https://download.inep.gov.br/enem/provas_e_gabaritos/2023_GB_impresso_D1_CD1.pdf" class="btn-simulado btn-gabarito" target="_blank">
+                      <i class="fas fa-check-double"></i> Gabarito
+                    </a>
+                  </div>
+                  <div class="exam-stats">
+                    <div class="stat-item">
+                      <span>Questões:</span>
+                      <span>90</span>
+                    </div>
+                    <div class="stat-item">
+                      <span>Duração:</span>
+                      <span>5 horas e 30 minutos</span>
+                    </div>
+                  </div>
+                </div>
+      
+                <!-- Segunda Fase -->
+                <div class="exam-card">
+                  <div class="exam-header">
+                    <span class="exam-year">2024</span>
+                    <span class="exam-type">2ª Fase</span>
+                  </div>
+                  <div class="exam-buttons">
+                    <a href="https://download.inep.gov.br/enem/provas_e_gabaritos/2023_PV_impresso_D2_CD5.pdf" class="btn-simulado btn-prova" target="_blank">
+                      <i class="fas fa-scroll"></i> Prova
+                    </a>
+                    <a href="https://download.inep.gov.br/enem/provas_e_gabaritos/2023_GB_impresso_D2_CD5.pdf" class="btn-simulado btn-gabarito" target="_blank">
+                      <i class="fas fa-check-double"></i> Gabarito
+                    </a>
+                  </div>
+                  <div class="exam-stats">
+                    <div class="stat-item">
+                      <span>Questões:</span>
+                      <span>90</span>
+                    </div>
+                    <div class="stat-item">
+                      <span>Duração:</span>
+                      <span>5 horas e 30 minutos</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+    <!-- Atualize a parte do Arquivo Histórico para: -->
+    <div class="simulado-archive">
+      <h3>Anos Anteriores</h3>
+      <div class="year-buttons">
+        <a href="https://acervo.fuvest.br/?t=vestibular&i=45" class="year-btn" target="_blank">2022</a>
+        <a href="https://acervo.fuvest.br/?t=vestibular&i=44" class="year-btn" target="_blank">2021</a>
+        <a href="https://acervo.fuvest.br/?t=vestibular&i=43" class="year-btn" target="_blank">2020</a>
+        <a href="https://acervo.fuvest.br/?t=vestibular&i=42" class="year-btn" target="_blank">2019</a>
+      </div>
+    </div>
+
+      <div class="simulado-deco simulado-deco-1">📖</div>
+      <div class="simulado-deco simulado-deco-2">✏️</div>
+    </div>
+  </div>
+
+<!-- Seção de Calendário -->
+    <div id="calendario" class="content-section" style="display: none">
+      <h2> Calendário 2025 </h2>
+      
+      <div class="highlight-box">
+        <h3>Primeiro Semestre</h3>
+        <ul>
+          <li><strong>Março:</strong> Início inscrições ENEM</li>
+          <li><strong>Abril:</strong> Vestibular UnB</li>
+          <li><strong>Agosto a outubro</strong> Inscrições FUVEST</li>
+        </ul>
+      </div>
+
+      <div class="highlight-box">
+        <h3>Segundo Semestre</h3>
+        <ul>
+          <li><strong>Agosto:</strong> ENEM</li>
+          <li><strong>Novembro:</strong> 1ª fase principais vestibulares</li>
+          <li><strong>Dezembro:</strong> 2ª fase FUVEST</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p> Direito <3 - Estudando com amor para realizar seu sonho! </p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

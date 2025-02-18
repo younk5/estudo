@@ -1,0 +1,216 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none; /* Remove o sublinhado */
+    color: inherit; /* Herda a cor do texto ao invés de definir uma cor específica */
+  }
+  
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #f9e3f8, #ffffff);
+    color: #5e2a7e;
+    padding: 20px;
+    line-height: 1.8;
+}
+
+/* Cabeçalho */
+header {
+    background: linear-gradient(135deg, #ffccf9, #ff85c0);
+    padding: 30px;
+    border-bottom: 3px solid #ff85c0;
+    text-align: center;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header p {
+    font-size: 1.2rem;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #ff6fb3;
+}
+
+/* Conteúdo Principal */
+main {
+    max-width: 1090px;
+    margin: 0 auto;
+}
+
+.conteudo {
+    background-color: #fff3ff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.conteudo:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Seção “frufru” */
+.frufru {
+    background-color: #ffe6f4;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Botão */
+button {
+    background-color: #ff85c0;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #ff6fb3;
+    transform: scale(1.05);
+}
+
+/* Botão voltar ao topo */
+#voltar-ao-topo {
+    display: none; /* Inicialmente oculto */
+    position: fixed;
+    bottom: 30px; /* Ajuste a distância inferior */
+    right: 20px; /* No canto inferior esquerdo */
+    background-color: #ff85c0;
+    color: white;
+    border: none;
+    padding: 20px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    border-radius: 12px; /* Bordas arredondadas */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    transition: all 0.3s ease-in-out; /* Transição suave */
+    transform-origin: center;
+    opacity: 0.9; /* Opacidade suave */
+}
+
+/* Classe para quando o botão estiver visível */
+#voltar-ao-topo.visible {
+    display: block; /* Torna o botão visível */
+}
+
+#voltar-ao-topo:hover {
+    background-color: #ff6fb3; /* Cor mais escura no hover */
+    transform: scale(1.1); /* Aumento suave */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Sombra mais forte no hover */
+    opacity: 1; /* Opacidade total */
+}
+
+#voltar-ao-topo:active {
+    transform: scale(1); /* Efeito de clique suave */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra normal no clique */
+}
+
+
+/* Botão voltar */
+
+.botoes-container {
+    display: flex;
+    gap: 700px; /* Espaço entre os botões */
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Estilo do botão de voltar à página inicial */
+.botao-inicio {
+    background-color: #ff85c0;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    display: inline-block;
+}
+
+.botao-inicio:hover {
+    background-color: #ff6fb3;
+    transform: scale(1.05);
+}
+
+/* Rodapé */
+footer {
+    background: linear-gradient(135deg, #ffccf9, #ff85c0);
+    padding: 15px;
+    border-top: 3px solid #ff85c0;
+    text-align: center;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+/* Tipografia dos Títulos */
+h1, h2, h3 {
+    font-weight: 600;
+}
+
+h2 {
+    font-size: 2rem;
+    color: #ff6fb3;
+    margin-bottom: 10px;
+}
+
+h3 {
+    font-size: 1.5rem;
+    color: #ff85c0;
+    margin-top: 10px;
+}
+
+/* Parágrafos */
+p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.lista-assuntos  {
+    list-style-position: inside; /* Coloca o marcador dentro do espaço do padding */
+    padding-left: 30px; /* Adiciona um espaçamento à esquerda */
+  }
+
+  .list-decimal, .list-disc, ul {
+    padding-left: 20px; /* Adiciona um espaçamento à esquerda */
+  }
+  
