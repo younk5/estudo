@@ -269,16 +269,44 @@ function gerarCronograma(vestibular) {
 }
 
 function abrirMateria(materia) {
-  fetch(`materials/${materia}.html`)
-    .then(response => response.text())
-    .then(html => {
-      document.getElementById('conteudo-materia').innerHTML = html;
-      document.getElementById('pagina-materia').style.display = 'block';
-    })
-    .catch(() => {
-      document.getElementById('conteudo-materia').innerHTML = '<p>Conteúdo não encontrado</p>';
-    });
+  fetch(`materials/html/${materia}.html`)
+      .then(response => {
+          if (!response.ok) throw new Error('Matéria não encontrada');
+          return response.text();
+      })
+      .then(html => {
+          document.getElementById('conteudo-materia').innerHTML = html;
+          document.getElementById('pagina-materia').style.display = 'block';
+          
+          // Carrega o CSS específico da matéria
+          const link = document.createElement('link');
+          link.rel = 'stylesheet';
+          link.href = `materials/css/materials.css`;
+          document.head.appendChild(link);
+          
+          // Carrega o JS específico da matéria
+          const script = document.createElement('script');
+          script.src = `materials/js/matemas.js`;
+          document.body.appendChild(script);
+      })
+      .catch(error => {
+          console.error('Erro ao carregar matéria:', error);
+          document.getElementById('conteudo-materia').innerHTML = `
+              <div class="error-message">
+                  <h3>📚 Conteúdo em Desenvolvimento</h3>
+                  <p>Nossa equipe está preparando material especial!</p>
+              </div>
+          `;
+      });
 }
 
+function voltarParaMaterias() {
+  document.getElementById('pagina-materia').style.display = 'none';
+  document.getElementById('materias').style.display = 'block';
+  
+  // Remove CSS e JS específicos
+  document.querySelector('link[href*="materials.css"]')?.remove();
+  document.querySelector('script[src*="matemas.js"]')?.remove();
+}
 
 
