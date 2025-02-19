@@ -214,3 +214,63 @@ p {
     padding-left: 20px; /* Adiciona um espaçamento à esquerda */
   }
   
+
+
+
+/* Adicionando suporte para mobile */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    header {
+        padding: 20px;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .conteudo {
+        padding: 15px;
+    }
+
+    .botoes-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .botao-inicio {
+        width: 100%;
+        text-align: center;
+    }
+
+    footer {
+        padding: 10px;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    .lista-assuntos {
+        padding-left: 20px;
+    }
+}

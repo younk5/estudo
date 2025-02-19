@@ -1088,3 +1088,73 @@ header {
   border-radius: var(--border-radius);
   margin: var(--spacing-lg) 0;
 }
+
+
+
+
+/* Adicionando suporte para mobile */
+@media (max-width: 768px) {
+  header h1 {
+      font-size: 1.8rem;
+  }
+
+  .nav-button {
+      padding: 10px 15px;
+      font-size: 0.9rem;
+  }
+
+  .subject-card {
+      padding: 15px;
+  }
+
+  .subject-header h3 {
+      font-size: 1.2rem;
+  }
+
+  .study-button {
+      padding: 10px;
+      font-size: 1rem;
+  }
+
+  .content-section {
+      padding: 15px;
+  }
+
+  .highlight-box {
+      padding: 15px;
+  }
+
+  .questao {
+      padding: 15px;
+  }
+
+  .questao button {
+      padding: 10px;
+      font-size: 0.9rem;
+  }
+
+  .simulado-section {
+      padding: 20px;
+  }
+
+  .simulado-header h2 {
+      font-size: 1.5rem;
+  }
+
+  .btn-simulado {
+      padding: 10px 20px;
+      font-size: 1rem;
+  }
+
+  .exam-card {
+      padding: 15px;
+  }
+
+  .exam-year {
+      font-size: 1rem;
+  }
+
+  .exam-buttons {
+      grid-template-columns: 1fr;
+  }
+}
