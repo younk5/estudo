@@ -268,9 +268,7 @@ function gerarCronograma(vestibular) {
   }
 }
 
-function abrirMateria(nome) {
-  window.location.href = "../materias/html/" + nome + ".html";
-}
+
 
 
 

@@ -698,6 +698,10 @@ header {
   border: 2px solid var(--accent-color);
   cursor: pointer;
   transition: all 0.3s ease;
+  display: block;
+  text-decoration: none; /* Remove o sublinhado do link */
+  color: inherit; /* Mantém a cor do texto original */
+  
 }
 
 .materia-card:hover {
