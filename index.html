@@ -130,10 +130,13 @@
 </div>
     
     <!-- Template para página de cada matéria -->
-      <div id="pagina-materia" class="content-section" style="display: none">
-        <button onclick="voltarParaMaterias()" class="voltar-btn">⬅️ Voltar</button>
-        <div id="conteudo-materia"></div>
-      </div>
+    <div id="pagina-materia" class="content-section" style="display: none">
+        <button onclick="voltarParaMaterias()" class="voltar-btn">← Voltar para Matérias</button>
+        
+        <div id="conteudo-materia">
+            <!-- Conteúdo será preenchido dinamicamente -->
+        </div>
+    </div>
 
 <!-- Seção de Simulados -->
   <div id="Simulados" class="content-section" style="display: none">
@@ -385,15 +388,15 @@
                     <span class="exam-type">2ª Fase</span>
                   </div>
                   <div class="exam-buttons">
-                    <a href="https://download.inep.gov.br/enem/provas_e_gabaritos/2024_PV_impresso_D2_CD5.pdf" class="btn-simulado btn-prova" target="_blank">
+                    <a href="https://download.inep.gov.br/enem/provas_e_gabaritos/2023_PV_impresso_D2_CD5.pdf" class="btn-simulado btn-prova" target="_blank">
                       <i class="fas fa-scroll"></i> Prova
                     </a>
-                    <a href="https://download.inep.gov.br/enem/provas_e_gabaritos/2024_GB_impresso_D2_CD5.pdf" class="btn-simulado btn-gabarito" target="_blank">
+                    <a href="https://download.inep.gov.br/enem/provas_e_gabaritos/2023_GB_impresso_D2_CD5.pdf" class="btn-simulado btn-gabarito" target="_blank">
                       <i class="fas fa-check-double"></i> Gabarito
                     </a>
                   </div>
                   <div class="exam-stats">
-                    <div class="stat-item">pagina-materia
+                    <div class="stat-item">
                       <span>Questões:</span>
                       <span>90</span>
                     </div>
